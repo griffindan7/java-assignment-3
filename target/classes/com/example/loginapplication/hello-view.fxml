@@ -1,16 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<!--Start importing classes-->
 
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.loginapplication.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Welcome!" onAction="#onHelloButtonClick"/>
-</VBox>
+<!--Finish importing -->
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginapplication.HelloController">
+    <left>
+        <AnchorPane prefHeight="400.0" prefWidth="160.0" style="-fx-background-color: #C9C9C9;" BorderPane.alignment="CENTER">
+            <Label layoutX="41.0" layoutY="191.0" text="Please Sign Up" />
+        </AnchorPane>
+    </left>
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="135.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="30.0" text="Email" />
+            <TextField layoutX="76.0" layoutY="42.0" />
+            <Label layoutX="125.0" layoutY="91.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="50.0" text="Password" />
+            <PasswordField fx:id="passwordBox" layoutX="76.0" layoutY="120.0" />
+            <Label layoutX="-42.0" layoutY="168.0" prefHeight="17.0" prefWidth="385.0" text="Note: Password must be &gt;7 chars and contain 1 letter, digit and character from '^&amp;@!'" textFill="#b1b1b1">
+               <font>
+                  <Font size="10.0" />
+               </font></Label>
+            <Button layoutX="125.0" layoutY="200.0" onAction="#signupButtonClick" text="Sign-Up!" />
+            <Label fx:id="passwordText" layoutY="151.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="300.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailText" layoutX="6.0" layoutY="71.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="300.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
