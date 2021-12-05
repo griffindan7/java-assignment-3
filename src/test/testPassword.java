@@ -17,7 +17,7 @@ public class testPassword {
     @Test
     void toValidatePassword(){
 
-        String formatOfPassword = "";
+        String formatOfPassword = "123456";
         boolean isPasswordCorrect = tester.test(formatOfPassword);
         Assertions.assertTrue(isPasswordCorrect);
 
